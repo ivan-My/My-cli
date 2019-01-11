@@ -1,6 +1,6 @@
 ##### 
 
-*这是一个多页面应用的cli*
+这是一个多页面应用的cli
 
 1. 安装依赖：
 ```
@@ -46,4 +46,4 @@ npm run build
     |──webpack.config.dev.js                    * 调试版本使用的webpack配置文件
     |__.babelrc                                 * babel配置文件
 ```
-*main.js是每个页面的入口文件，必须有*
+main.js是每个页面的入口文件，必须有
