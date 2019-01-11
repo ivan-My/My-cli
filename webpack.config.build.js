@@ -13,10 +13,10 @@ const buildConfig = {
     output: {
         path: distPath,
         filename: 'js/[name].[hash].min.js',
-        publicPath: './' // 可根据自己实际情况修改
+        publicPath: './'
     },
     plugins: [
-        new CleanWebpackPlugin([distPath],{allowExternal: true}),
+        new CleanWebpackPlugin([distPath], { allowExternal: true }),
         new CopyWebpackPlugin([
             { from: 'src/static', to: path.resolve(distPath, 'static'), force: true }
         ]),
@@ -26,5 +26,5 @@ const buildConfig = {
     ].concat(baseConfig.htmlArray)
 };
 
-module.exports = merge(baseConfig.baseConfig,buildConfig);
+module.exports = merge(baseConfig.baseConfig, buildConfig);
 

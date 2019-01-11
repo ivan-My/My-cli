@@ -13,7 +13,7 @@ npm start
 ```
 npm run build
 ```
-*启动build之后，项目打包过后的文件会自动打包dist文件下*
+启动build之后，项目打包过后的文件会自动打包dist文件下
 
 # 目录结构<div id="root"></div>
 开发和发布版本的配置文件是分开的，多入口页面的目录结构。
@@ -43,4 +43,4 @@ npm run build
     |──webpack.config.dev.js                    * 调试版本使用的webpack配置文件
     |__.babelrc                                 * babel配置文件
 ```
-main.js是每个页面的入口文件，必须有
+* main.js是每个页面的入口文件，必须有,containers中的文件名就是生成的页面名字；
