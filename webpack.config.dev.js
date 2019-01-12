@@ -1,9 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const devPath = path.resolve(__dirname, 'dev');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
+const baseConfig = require('./webpack.config.base');
+
 
 const devConfig = {
     mode: 'development',
@@ -14,6 +16,9 @@ const devConfig = {
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new CopyWebpackPlugin([
+            { from: 'src/static', to: path.resolve(devPath, 'static'), force: true }
+        ]),
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
@@ -24,15 +29,16 @@ const devConfig = {
         hot: true,
         port: 3000,
         disableHostCheck: true,
-        proxy: {
-            '/video': {
-                target: 'http://casio.tanzhitv.com',
-                changeOrigin: true,
-                secure: false
-            }
-        }
+        //跨域设置
+        // proxy: {
+        //     '/video': {
+        //         target: 'http://www.baidu.com',
+        //         changeOrigin: true,
+        //         secure: false
+        //     }
+        // }
     },
 };
 
-module.exports = merge(baseConfig.baseConfig,devConfig);
+module.exports = merge(baseConfig.baseConfig, devConfig);
 
