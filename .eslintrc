@@ -1,0 +1,22 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+        "node": true
+    },
+    "globals": {
+        "window": true,
+        "document": true,
+        "module": true,
+        "require": true,
+        "console": true
+    },
+    "rules": {
+        "react/prop-types": "off",
+        "no-console": "off",
+        "no-debugger": "off"
+    }
+}

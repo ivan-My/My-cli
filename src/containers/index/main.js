@@ -1,16 +1,12 @@
 import React from 'react';
-
-import { main } from '../../utils/util';
-
+import ReactDom from 'react-dom'
 
 
-
-@main
 class Main extends React.Component {
-    componentDidMount() {
-
-    }
     render() {
-        return <div>index111222</div>
+        return <div>index</div>
     }
 }
+
+
+ReactDom.render(<Main />, document.getElementById('root'));

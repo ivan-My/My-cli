@@ -1,11 +1,10 @@
-const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const distPath = path.resolve(__dirname, './dist');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
+const baseConfig = require('./webpack.config.base');
 
 
 const buildConfig = {

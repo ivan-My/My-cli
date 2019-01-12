@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const devPath = path.resolve(__dirname, 'dev');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
+const baseConfig = require('./webpack.config.base');
 
 
 const devConfig = {

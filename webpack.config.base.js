@@ -47,7 +47,7 @@ const baseConfig = {
     },
     module: {
         rules: [
-            { test: /\.(js|jsx)$/, use: [{ loader: 'babel-loader' }], include: srcRoot },
+            { test: /\.(js|jsx)$/, use: [{ loader: 'babel-loader' },{loader: 'eslint-loader'}], include: srcRoot },
             {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, {
@@ -65,7 +65,6 @@ const baseConfig = {
             }
         ]
     },
-
     optimization: {
         splitChunks: {
             cacheGroups: {
