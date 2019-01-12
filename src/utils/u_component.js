@@ -1,7 +1,7 @@
-export const Tips = function(msg, time) {
-    var msg = msg === undefined ? '&nbsp;' : msg;
+export const Tips = function(msgs, times) {
+    var msg = msgs === undefined ? '&nbsp;' : msgs;
     var tips = document.querySelector('.tips');
-    var time = time || 1000;
+    var time = times || 1000;
     if (tips) {
         tips.innerHTML = msg;
         if (window.tipsTimer) {
