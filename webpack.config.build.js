@@ -11,8 +11,8 @@ const buildConfig = {
     mode: 'production',
     output: {
         path: distPath,
-        filename: 'js/[name].[hash].min.js',
-        publicPath: './'
+        filename: './js/[name].[hash].min.js',
+        //publicPath: './'
     },
     plugins: [
         new CleanWebpackPlugin([distPath], { allowExternal: true }),
@@ -20,7 +20,7 @@ const buildConfig = {
             { from: 'src/static', to: path.resolve(distPath, 'static'), force: true }
         ]),
         new MiniCssExtractPlugin({
-            filename: "css/[name].[hash].css",
+            filename: "./css/[name].[hash].css",
         })
     ].concat(baseConfig.htmlArray)
 };
