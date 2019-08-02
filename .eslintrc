@@ -1,22 +1,13 @@
 {
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": "airbnb",
     "parser": "babel-eslint",
-    "env": {
-        "node": true
-    },
-    "globals": {
-        "window": true,
+    "globals":{
         "document": true,
-        "module": true,
-        "require": true,
-        "console": true
-    },
-    "rules": {
-        "react/prop-types": "off",
-        "no-console": "off",
-        "no-debugger": "off"
-    }
+        "localStorage": true,
+        "window": true
+      },
+      "rules":{
+        "quotes":"off", //关闭字符串小写
+        "lines-between-class-members":"warn"
+      }
 }
