@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 const srcRoot = path.resolve(__dirname, 'src');
 const containerDir = path.resolve(srcRoot, 'containers');
 const mainFile = 'main.js';
