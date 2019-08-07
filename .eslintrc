@@ -1,13 +1,14 @@
 {
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "globals":{
-        "document": true,
-        "localStorage": true,
-        "window": true
-      },
-      "rules":{
-        "quotes":"off", //关闭字符串小写
-        "lines-between-class-members":"warn"
-      }
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "globals": {
+    "document": true,
+    "localStorage": true,
+    "window": true
+  },
+  "rules": {
+    "quotes": "off", //关闭字符串小写
+    "lines-between-class-members": "warn",
+    "react/jsx-filename-extension":"off" //关闭文件必须为jsx
+  }
 }
